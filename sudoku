@@ -46,7 +46,7 @@ public class Sudoku {
             }
 
         }
-        if(i == n && j == n){
+        if(i == n){
             return  true;
         }
         else {
@@ -79,16 +79,7 @@ public class Sudoku {
             }
         }
      
-        int baserow = row - (row % 3);
-        int basecolumn = column - (column % 3);
-        for (int i = baserow; i < baserow + 3; i++) {
-            for (int j = basecolumn; j < basecolumn + 3; j++) {
-                if(board[i][j] == numbers){
-                    return  false;
-                }
-
-            }
-        }
+        
         return true;
     }
 }
